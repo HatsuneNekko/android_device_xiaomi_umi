@@ -17,9 +17,9 @@ $(call inherit-product, device/xiaomi/umi/device.mk)
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := miku_umi
 PRODUCT_DEVICE := umi
-PRODUCT_BRAND := xiaomi
+PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Xiaomi 10/umi
-PRODUCT_MANUFACTURER := xiaomi
+PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=umi 
