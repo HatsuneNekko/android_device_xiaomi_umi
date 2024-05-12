@@ -9,16 +9,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common miku stuff.
-$(call inherit-product, vendor/miku/config/common_full_phone.mk)
+$(call inherit-product, vendor/miku/build/product/miku_product.mk)
 
 # Inherit from umi device
 $(call inherit-product, device/xiaomi/umi/device.mk)
 
-PRODUCT_NAME := lineage_umi
+## Device identifier. This must come after all inclusions
+PRODUCT_NAME := miku_umi
 PRODUCT_DEVICE := umi
-PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Mi 10
+PRODUCT_BRAND := xiaomi
+PRODUCT_MODEL := Xiaomi 10/umi
+PRODUCT_MANUFACTURER := xiaomi
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=umi 
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
